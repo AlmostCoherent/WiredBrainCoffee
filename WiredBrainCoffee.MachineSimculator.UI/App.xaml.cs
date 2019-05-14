@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WiredBrainCoffee
+namespace WiredBrainCoffee.MachineSimculator.UI
 {
     /// <summary>
     /// Interaction logic for App.xaml

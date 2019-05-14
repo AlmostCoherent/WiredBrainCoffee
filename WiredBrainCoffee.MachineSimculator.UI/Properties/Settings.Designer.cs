@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WiredBrainCoffee.Properties
+namespace WiredBrainCoffee.MachineSimculator.UI.Properties
 {
 
 

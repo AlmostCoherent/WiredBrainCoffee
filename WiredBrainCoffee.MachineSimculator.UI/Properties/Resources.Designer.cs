@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WiredBrainCoffee.Properties
+namespace WiredBrainCoffee.MachineSimculator.UI.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace WiredBrainCoffee.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WiredBrainCoffee.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WiredBrainCoffee.MachineSimculator.UI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
