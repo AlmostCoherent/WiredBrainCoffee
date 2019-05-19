@@ -5,7 +5,30 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.MachineSimculator.UI", "WiredBrainCoffee.MachineSimculator.UI\WiredBrainCoffee.MachineSimculator.UI.csproj", "{9B617E43-3B26-4D21-97DF-75DD34BAE602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.EventHub.Sender", "WiredBrainCoffee.EventHub.Sender\WiredBrainCoffee.EventHub.Sender.csproj", "{BCBC6D4B-3472-489E-9949-17AC574A966F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiredBrainCoffee.EventHub.Sender", "WiredBrainCoffee.EventHub.Sender\WiredBrainCoffee.EventHub.Sender.csproj", "{BCBC6D4B-3472-489E-9949-17AC574A966F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WiredBrainCoffee.AngularApp", "WiredBrainCoffee.AngularApp\", "{26EBEC69-716F-4A85-9D5F-846500B651D3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55218"
+		Debug.AspNetCompiler.PhysicalPath = "WiredBrainCoffee.AngularApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55218\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55218"
+		Release.AspNetCompiler.PhysicalPath = "WiredBrainCoffee.AngularApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55218\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55218"
+		SlnRelativePath = "WiredBrainCoffee.AngularApp\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.API", "WiredBrainCoffee.API\WiredBrainCoffee.API.csproj", "{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +44,14 @@ Global
 		{BCBC6D4B-3472-489E-9949-17AC574A966F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBC6D4B-3472-489E-9949-17AC574A966F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCBC6D4B-3472-489E-9949-17AC574A966F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EBEC69-716F-4A85-9D5F-846500B651D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EBEC69-716F-4A85-9D5F-846500B651D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EBEC69-716F-4A85-9D5F-846500B651D3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EBEC69-716F-4A85-9D5F-846500B651D3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

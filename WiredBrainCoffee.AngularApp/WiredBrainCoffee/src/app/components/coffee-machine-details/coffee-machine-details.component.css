@@ -1,0 +1,11 @@
+.app-machine-details-container {
+  text-align: center;
+}
+
+.app-machine-details-container span:nth-child(2) {
+  padding-left: 20px;
+}
+
+label {
+  padding-right: 5px;
+}
