@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee.MachineSimculator.UI"
         mc:Ignorable="d"
-        Title="Coffee Machine Simulator" Height="350" Width="525" FontSize="16">
+        Title="Coffee Machine Simulator" Height="400" Width="525" FontSize="16">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition />
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -54,12 +56,25 @@
         </GroupBox>
         <GroupBox Header="Send periodically" Grid.Row="2" Grid.Column="1" Margin="5">
             <StackPanel>
-                <CheckBox Content="Is sending" />
-                <TextBlock Text="Boiler temp" />
-                <Slider></Slider>
-                <TextBlock Text="Bean level" />
-                <Slider></Slider>
-            </StackPanel>
+                <CheckBox Content="Is sending"
+						  IsChecked="{Binding IsSendingPeriodically, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+				<TextBlock 
+					Text="{Binding BoilerTemp, StringFormat=Boiler temp: {0}°C}" />
+				<Slider 
+					Value="{Binding BoilerTemp, Mode=TwoWay}" 
+					Maximum="100">
+				</Slider>
+				<TextBlock 
+					Text="{Binding BeanLevel, StringFormat=Bean level: {0}%}" />
+				<Slider 
+					Value="{Binding BeanLevel, Mode=TwoWay}" 
+					Maximum="100">
+				</Slider>
+			</StackPanel>
         </GroupBox>
-    </Grid>
+		<GridSplitter Grid.Row="3" Grid.ColumnSpan="2" Height="5" HorizontalAlignment="Stretch"></GridSplitter>
+		<GroupBox Header="Logs" Grid.Row="4" Grid.ColumnSpan="2">
+			<ListView ItemsSource="{Binding Logs}"></ListView>
+		</GroupBox>
+	</Grid>
 </Window>
