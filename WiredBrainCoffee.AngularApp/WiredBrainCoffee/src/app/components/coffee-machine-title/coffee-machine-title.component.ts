@@ -4,7 +4,7 @@ import { CoffeeMachineDataServiceService } from '../../services/coffee-machine-d
 @Component({
   selector: 'app-coffee-machine-title',
   templateUrl: './coffee-machine-title.component.html',
-  styleUrls: ['./coffee-machine-title.component.css']
+  styleUrls: ['./coffee-machine-title.component.scss']
 })
 export class CoffeeMachineTitleComponent implements OnInit {
 

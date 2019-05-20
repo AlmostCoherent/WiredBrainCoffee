@@ -5,7 +5,7 @@ import { MachineData } from 'src/models/machineData';
 @Component({
   selector: 'app-coffee-machine-details',
   templateUrl: './coffee-machine-details.component.html',
-  styleUrls: ['./coffee-machine-details.component.css']
+  styleUrls: ['./coffee-machine-details.component.scss']
 })
 export class CoffeeMachineDetailsComponent implements OnInit {
 

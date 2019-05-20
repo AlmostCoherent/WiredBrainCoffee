@@ -9,7 +9,7 @@ import { Guid } from 'guid-typescript';
 
 export class CoffeeMachineDataServiceService {
 
-  private machineData: MachineData;
+  public machineData: MachineData;
   private machineDataSource = new BehaviorSubject(this.machineData);
   machineDataMessage = this.machineDataSource.asObservable();
 
@@ -22,6 +22,18 @@ export class CoffeeMachineDataServiceService {
   }
 
   getDefaultData() {
-    return new MachineData(Guid.create().toString().substring(0, 8), "London", 0, 0);
+    if (!this.machineData) {
+      this.machineData = new MachineData(Guid.create().toString().substring(0, 8), "London", 0, 0);
+    }
+    return this.machineData;
   }
+
+  createMachineDataEspresso() {
+    this.machineData.MakeEspresso();
+  }
+
+  createMachineDataCappuccino() {
+    this.machineData.MakeCappuccino();
+  }
+
 }
