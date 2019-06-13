@@ -14,7 +14,7 @@ export class CoffeeMachineDetailsComponent implements OnInit {
   constructor(private coffeeMachineDataService: CoffeeMachineDataServiceService) { }
 
   ngOnInit() {
-    this.machineData = this.coffeeMachineDataService.getDefaultData();
+    this.machineData = this.coffeeMachineDataService.getData();
     console.log(this.machineData);
   }
 }

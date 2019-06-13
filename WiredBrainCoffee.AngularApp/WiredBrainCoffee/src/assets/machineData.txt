@@ -1,0 +1,6 @@
+{
+  "SerialNumber": "",
+  "City": "London",
+  "BeanLevel": 50,
+  "BoilerTemp": 50
+}

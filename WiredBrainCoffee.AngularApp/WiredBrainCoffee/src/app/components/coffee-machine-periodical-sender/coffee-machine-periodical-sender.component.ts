@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CoffeeMachineDataServiceService } from 'src/app/services/coffee-machine-data-service.service';
+import { MachineData } from 'src/models/machineData';
+import { Guid } from 'guid-typescript';
 
 @Component({
   selector: 'app-coffee-machine-periodical-sender',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoffeeMachinePeriodicalSenderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private coffeeMachineDataService: CoffeeMachineDataServiceService) { }
+
+//  model: MachineData = new MachineData(Guid.create().toString().substring(0, 8), "London", 0, 0, 0, 0);
+  data: any;
+  statusText: string;
+
 
   ngOnInit() {
+    //const machineDataObservable = this.coffeeMachineDataService.getData();
+    //machineDataObservable.subscribe(
+    //  (machineData: any) => {
+    //    this.data = machineData;
+    //  },
+    //  err => {
+    //    console.log(err)
+    //  }
+    //)
+
+    //console.log(this.data);
+  }
+
+  sendPeriodically() {
   }
 
 }

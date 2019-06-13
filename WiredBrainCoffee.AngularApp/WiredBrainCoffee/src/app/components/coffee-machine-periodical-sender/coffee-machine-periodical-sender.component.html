@@ -1,10 +1,12 @@
 <div class="periodical-sender-container">
-  <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="sendDataPeriodically">
-    <label class="custom-control-label" for="sendDataPeriodically">Send Data Periodically</label>
-  </div>
-  <label for="boilerTemp">Boiler Temp</label>
-  <input type="range" class="custom-range" min="0" max="100" id="boilerTemp">
-  <label for="beanLevel">Bean Level</label>
-  <input type="range" class="custom-range" min="0" max="100" id="beanLevel">
+  <form>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" (change)="sendPeriodically()" class="custom-control-input" id="sendDataPeriodically">
+      <label class="custom-control-label" for="sendDataPeriodically">Send Data Periodically</label>
+    </div>
+    <label for="boilerTemp">Boiler Temp</label>
+    <input type="range" class="custom-range" [(ngModel)]="model.BoilerTemp" min="0" max="100" id="boilerTemp" name="boilerTemp">
+    <label for="beanLevel">Bean Level</label>
+    <input type="range" class="custom-range" [(ngModel)]="model.BeanLevel" min="0" max="100" id="beanLevel" name="beanLevel">
+  </form>
 </div>

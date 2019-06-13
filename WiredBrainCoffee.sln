@@ -28,7 +28,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WiredBrainCoffee.AngularApp
 		SlnRelativePath = "WiredBrainCoffee.AngularApp\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.API", "WiredBrainCoffee.API\WiredBrainCoffee.API.csproj", "{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiredBrainCoffee.API", "WiredBrainCoffee.API\WiredBrainCoffee.API.csproj", "{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.EventHub.Receivers.Direct", "WiredBrainCoffee.EventHub.Receivers.Direct\WiredBrainCoffee.EventHub.Receivers.Direct.csproj", "{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
