@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { MachineData } from 'src/models/machineData';
 import { Guid } from 'guid-typescript';
+import { Console } from '@angular/core/src/console';
 
 @Injectable({
   providedIn: 'root'
@@ -21,21 +22,21 @@ export class CoffeeMachineDataServiceService {
   //  console.log(this.machineDataMessage);
   //}
 
-  //sendData(): Observable<MachineData> {
+  //sendData(): any {
   //  let subject = new Subject();
   //  subject.subscribe(value => console.log("Received new subscribe value: "))
   //  console.log(JSON.stringify(this.machineData));
   //}
 
-  //getData(): MachineData {
-  //  const machineDataObservable = new Observable(observer => {
-  //    setTimeout(() => {
-  //      observer.next(this.machineData)
-  //    }, 1000)
-  //  });
-
-  //  return machineDataObservable;
-  //}
+  getData(): Observable<any> {
+    const machineDataObservable = new Observable(observer => {
+      setTimeout(() => {
+        observer.next(this.machineData)
+      }, 1000)
+    });
+    console.log("getDataResult: ", machineDataObservable);
+    return machineDataObservable;
+  }
 
   createMachineDataEspresso() {
     this.machineData.MakeEspresso();

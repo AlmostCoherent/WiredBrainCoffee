@@ -26,7 +26,7 @@ namespace WiredBrainCoffee.EventHub.Sender
         public async Task SendDataAsync(CoffeeMachineData coffeeMachineData)
 		{
 			EventData eventData = CreateEventData(coffeeMachineData);
-			await _eventHubClient.SendAsync(eventData);
+			await _eventHubClient.SendAsync(eventData, "counters");
 		}
 		public async Task SendDataAsync(IEnumerable<CoffeeMachineData> coffeeMachineData)
 		{

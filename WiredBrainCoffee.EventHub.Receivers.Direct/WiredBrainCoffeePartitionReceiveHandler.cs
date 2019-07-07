@@ -1,8 +1,10 @@
 ﻿using Microsoft.Azure.EventHubs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using WiredBrainCoffee.EventHub.Model;
 
 namespace WiredBrainCoffee.EventHub.Receivers.Direct
 {
@@ -28,7 +30,9 @@ namespace WiredBrainCoffee.EventHub.Receivers.Direct
                 foreach (EventData data in eventDatas)
                 {
                     var dataAsJson = Encoding.UTF8.GetString(data.Body.Array);
-                    Console.WriteLine($"{dataAsJson} | PartitionId: { _partitionId }");
+                    CoffeeMachineData coffeeMachineData =
+                        JsonConvert.DeserializeObject<CoffeeMachineData>(dataAsJson);
+                    Console.WriteLine($"{coffeeMachineData} | PartitionId: { _partitionId } | Offset: { data.SystemProperties.Offset }");
                 }
             }
 

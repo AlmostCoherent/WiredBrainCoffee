@@ -23,7 +23,7 @@ namespace WiredBrainCoffee.EventHub.Receivers.Direct
             var runtimeInformation = await eventHubClient.GetRuntimeInformationAsync();
 
             var partitionReceivers = runtimeInformation.PartitionIds.Select(partitionId => 
-                                                eventHubClient.CreateReceiver("$Default", partitionId, EventPosition.FromStart())).ToList();
+                                                eventHubClient.CreateReceiver("wired_brain_coffee_console_direct", partitionId, EventPosition.FromStart())).ToList();
 
             Console.WriteLine("Waiting for incoming events...");
 

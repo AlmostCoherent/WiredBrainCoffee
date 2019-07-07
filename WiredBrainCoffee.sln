@@ -30,7 +30,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WiredBrainCoffee.AngularApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiredBrainCoffee.API", "WiredBrainCoffee.API\WiredBrainCoffee.API.csproj", "{7009D2C4-2579-4E65-B0FD-F9DC365B52AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.EventHub.Receivers.Direct", "WiredBrainCoffee.EventHub.Receivers.Direct\WiredBrainCoffee.EventHub.Receivers.Direct.csproj", "{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WiredBrainCoffee.EventHub.Receivers.Direct", "WiredBrainCoffee.EventHub.Receivers.Direct\WiredBrainCoffee.EventHub.Receivers.Direct.csproj", "{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.EventHub.Model", "WiredBrainCoffee.EventHub.Model\WiredBrainCoffee.EventHub.Model.csproj", "{066FF51B-6D17-4823-B2A5-1FBA0CA3A208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredBrainCoffee.EventHub.Receivers.Processor", "WiredBrainCoffee.EventHub.Receivers.Processor\WiredBrainCoffee.EventHub.Receivers.Processor.csproj", "{96D498B2-52DE-4210-AB17-60CB5DE08958}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +62,14 @@ Global
 		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E2A3945-5F3C-4B91-B7D1-9624A0DA3BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066FF51B-6D17-4823-B2A5-1FBA0CA3A208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066FF51B-6D17-4823-B2A5-1FBA0CA3A208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066FF51B-6D17-4823-B2A5-1FBA0CA3A208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066FF51B-6D17-4823-B2A5-1FBA0CA3A208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D498B2-52DE-4210-AB17-60CB5DE08958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D498B2-52DE-4210-AB17-60CB5DE08958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D498B2-52DE-4210-AB17-60CB5DE08958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D498B2-52DE-4210-AB17-60CB5DE08958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
