@@ -1,10 +1,10 @@
 <div class="app-machine-details-container">
   <span>
     <label for="machineLocation">Location:</label>
-    <input value="{{ this.machineData.City }}" name="machineLocation" />
+    <input #place value="{{ this.machineData.Location }}" (keyup.enter)="updateLocationValue(place.value)" (blur)="updateLocationValue(place.value);" name="machineLocation" />
   </span>
   <span>
     <label for="machineLocation">Serial Number:</label>
-    <input value="{{ this.machineData.SerialNumber }}" name="machineSerial" />
+    <input #serial value="{{ this.machineData.SerialNumber }}" (keyup.enter)="updateSerialValue(serial.value)" (blur)="updateSerialValue(serial.value);" name="machineSerial" />
   </span>
 </div>

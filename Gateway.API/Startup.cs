@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace WiredBrainCoffee.API
+namespace Gateway.API
 {
     public class Startup
     {

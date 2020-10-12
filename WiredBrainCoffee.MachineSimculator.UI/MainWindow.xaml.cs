@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Windows;
 using WiredBrainCoffee.EventHub.Sender;
+using WiredBrainCoffee.MachineSimculator.UI.Service;
 using WiredBrainCoffee.MachineSimculator.UI.ViewModel;
 
 namespace WiredBrainCoffee.MachineSimculator.UI
@@ -15,7 +16,7 @@ namespace WiredBrainCoffee.MachineSimculator.UI
             var eventHubConnectionString =
                 ConfigurationManager.AppSettings["EventHubConnectionString"];
             InitializeComponent();
-            DataContext = new MainViewModel(new CoffeeMachineDataSender(eventHubConnectionString));
+            DataContext = new MainViewModel(new EventHubService());
         }
     }
 }

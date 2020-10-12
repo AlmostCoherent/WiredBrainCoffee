@@ -13,7 +13,7 @@ export class CoffeeMachinePeriodicalSenderComponent implements OnInit {
   constructor(private coffeeMachineDataService: CoffeeMachineDataServiceService) { }
 
 //  model: MachineData = new MachineData(Guid.create().toString().substring(0, 8), "London", 0, 0, 0, 0);
-  data: any;
+  data: MachineData;
   statusText: string;
 
 
@@ -29,6 +29,16 @@ export class CoffeeMachinePeriodicalSenderComponent implements OnInit {
     //)
 
     //console.log(this.data);
+    this.coffeeMachineDataService.machineDataSource.subscribe(
+      success => {
+        console.log(success);
+        this.data = success;
+      },
+      error => {
+        console.log(error);
+      }
+      );
+
   }
 
   sendPeriodically() {

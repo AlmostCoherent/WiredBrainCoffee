@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WiredBrainCoffee.API": {
+    "Gateway.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "",

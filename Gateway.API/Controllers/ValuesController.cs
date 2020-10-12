@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WiredBrainCoffee.API.Controllers
+namespace Gateway.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -28,7 +28,7 @@ namespace WiredBrainCoffee.API.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
-            var temp = value; 
+            var temp = value;
         }
 
         // PUT api/values/5

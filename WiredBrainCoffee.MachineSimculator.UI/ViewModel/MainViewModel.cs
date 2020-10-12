@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using WiredBrainCoffee.EventHub.Sender;
 using WiredBrainCoffee.EventHub.Sender.Model;
+using WiredBrainCoffee.MachineSimculator.UI.Service;
 
 namespace WiredBrainCoffee.MachineSimculator.UI.ViewModel
 {
@@ -20,13 +21,13 @@ namespace WiredBrainCoffee.MachineSimculator.UI.ViewModel
 		private int _boilerTemp;
         private string _city;
         private string _serialNumber;
-        private ICoffeeMachineDataSender _coffeeMachineDataSender;
+        private IEventHubService _eventHubService;
 		private bool _isSendingPeriodically;
 		private DispatcherTimer _dispatcherTimer;
 
-        public MainViewModel(ICoffeeMachineDataSender coffeeMachineDataSender)
+        public MainViewModel(IEventHubService eventHubService)
         {
-            _coffeeMachineDataSender = coffeeMachineDataSender;
+            _eventHubService = eventHubService;
             SerialNumber = System.Guid.NewGuid().ToString().Substring(0,8);
             MakeCappuccinoCommand = new DelegateCommand(MakeCappuccino);
             MakeEspressoCommand = new DelegateCommand(MakeEspresso);
@@ -150,7 +151,9 @@ namespace WiredBrainCoffee.MachineSimculator.UI.ViewModel
         {
 			try
 			{
-				await _coffeeMachineDataSender.SendDataAsync(coffeeMachineData);
+				List<CoffeeMachineData> coffeeMachineDatas = new List<CoffeeMachineData>();
+				coffeeMachineDatas.Add(coffeeMachineData);
+				await _eventHubService.SendEventData(coffeeMachineDatas);
 				WriteLog($"Sent data: { coffeeMachineData }");
 			}
 			catch (Exception ex)
@@ -162,7 +165,7 @@ namespace WiredBrainCoffee.MachineSimculator.UI.ViewModel
 		{
 			try
 			{
-				await _coffeeMachineDataSender.SendDataAsync(coffeeMachineData);
+				await _eventHubService.SendEventData(coffeeMachineData);
 				foreach (var data in coffeeMachineData)
 				{
 					WriteLog($"Sent data: { data }");

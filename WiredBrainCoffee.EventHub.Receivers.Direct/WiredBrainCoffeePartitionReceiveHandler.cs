@@ -30,9 +30,9 @@ namespace WiredBrainCoffee.EventHub.Receivers.Direct
                 foreach (EventData data in eventDatas)
                 {
                     var dataAsJson = Encoding.UTF8.GetString(data.Body.Array);
-                    CoffeeMachineData coffeeMachineData =
-                        JsonConvert.DeserializeObject<CoffeeMachineData>(dataAsJson);
-                    Console.WriteLine($"{coffeeMachineData} | PartitionId: { _partitionId } | Offset: { data.SystemProperties.Offset }");
+                    //CoffeeMachineData coffeeMachineData =
+                    //    JsonConvert.DeserializeObject<CoffeeMachineData>(dataAsJson);
+                    Console.WriteLine($"{dataAsJson} | PartitionId: { _partitionId } | Offset: { data.SystemProperties.Offset }");
                 }
             }
 

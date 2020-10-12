@@ -1,0 +1,28 @@
+﻿{
+  "routes": [
+    {
+      "endpoint": "/",
+      "destination": {
+        "uri": "https://www.google.com",
+        "requiresAuthentication": false
+      }
+    },
+    {
+      "endpoint": "/event/send",
+      "destination": {
+        "uri": "http://localhost:7073/api/CoffeeMachineDataProviderPost",
+        "requiresAuthentication": false
+      }
+    },
+    {
+      "endpoint": "/event/get",
+      "destination": {
+        "uri": "http://localhost:7073/api/CoffeeMachineDataProvider",
+        "requiresAuthentication": false
+      }
+    }
+  ]
+  //"authenticationService": {
+  //  "uri": "http://localhost:8080/api/auth/"
+  //}
+}  
